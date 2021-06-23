@@ -1,9 +1,11 @@
 import { useHistory } from 'react-router-dom'
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg';
 import GoogleIcomImg from '../assets/images/google-icon.svg';
+
+import { database } from '../services/firebase';
 
 import { Button } from '../components/button'
 import { useAuth } from '../hooks/useAuth';
@@ -16,6 +18,8 @@ import '../styles/auth.scss';
 export function Home() {
     const history = useHistory();
     const { user, singInWithGoogle } = useAuth()
+    const [roomCode, setRoomCode] = useState('');
+
 
 
     async function handleCreateRoom() {
@@ -28,7 +32,20 @@ export function Home() {
     }
 
     async function handleJoinRoom(event: FormEvent) {
+        event.preventDefault();
 
+        if (roomCode.trim() === '') {
+            return;
+        }
+
+        const roomRef = await database.ref(`rooms/${roomCode}`).get();
+
+        if (!roomRef.exists()) {
+            alert('Room does not existis.');
+            return;
+        }
+
+        history.push(`/rooms/${roomCode}`);
     }
 
 
@@ -51,6 +68,8 @@ export function Home() {
                         <input
                             type="text"
                             placeholder="Digite o código da sala"
+                            onChange={event => setRoomCode(event.target.value)}
+                            value={roomCode}
                         />
                         <Button type="submit">
                             Entrar na sala
