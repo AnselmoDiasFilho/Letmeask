@@ -10,11 +10,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        >div {
+            display: flex;
+            gap: 16px;
+
+
+            button {
+                height: 40px;
+            }
+        }
     }
 
     >img {
         max-width: 45px;
     }
+
+
 
     main {
         max-width: 800px;
@@ -63,27 +75,26 @@
                 .user-info {
                     display: flex;
                     align-items: center;
-                }
 
-                img {
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 50%;
-                }
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                    }
 
-                span {
-                    margin-left: 8px;
-                    color: #29292e;
-                    font-weight: 500;
-                    font-size: 14px;
-                }
+                    span {
+                        margin-left: 8px;
+                        color: #29292e;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
 
 
-                >span {
-                    font-size: 14px;
-                    color: #737380;
-                    font-weight: 500;
-
+                    >span {
+                        font-size: 14px;
+                        color: #737380;
+                        font-weight: 500;
+                    }
 
 
 
@@ -100,6 +111,10 @@
             }
 
 
+        }
+
+        .question-list {
+            margin-top: 32px;
         }
     }
 }
