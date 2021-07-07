@@ -1,9 +1,9 @@
- #     NLW-TOGETHER 
+ 
 
 <br />
 <br />
 <h1 align="center">
-  <img alt="letmeask" src=".github/assets/logo.svg" width="420px" /> 
+ #     NLW-TOGETHER 
   <br />
   <br />
   NextJS |  Typescript  |  Firebase | 
