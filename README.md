@@ -8,10 +8,9 @@
   <br />
   NextJS |  Typescript  |  Firebase | 
 </h1>
-
+  
 <p align="center">
   <img alt="Rocketseat" src="https://img.shields.io/badge/Created%20by%3A-Rocketseat-%236D5CCD" />
-  <img alt="EddyPBR" src="https://img.shields.io/badge/Developed%20by%3A-EddyPBR-%23DD3B3F" />
   <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-%2398C611" />
   <img alt="Typescript" src="https://img.shields.io/badge/Main%20lenguage-Typescript-%232F74C0" /> <br />
 </p> 
